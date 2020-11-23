@@ -8,6 +8,7 @@ const fs = require("fs");
 
     let data = fs.readFileSync(file, "utf8");
     let obj = JSON.parse(data);
+    console.log(process.cwd());
     console.log("PARSED DATA:", obj);
     core.setOutput("slack_id", obj[githubUsername]);
   } catch (error) {
