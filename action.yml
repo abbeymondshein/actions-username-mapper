@@ -1,0 +1,15 @@
+name: 'Map Github Username to Slack Id'
+description: 'Accepts a GH Username, the locatin of a JSON file correlating a GH Username and Slack ID, and returns the desired slack id'
+inputs:
+  github-username:  # id of input
+    description: 'Github username' 
+    required: true
+  file:
+    description: 'location of json file to parse for username mapping'
+    required: true
+outputs:
+  slack-id: # id of output
+    description: 'Slack id'
+runs:
+  using: 'node12'
+  main: 'index.js'
