@@ -6,12 +6,8 @@ const fs = require("fs");
     console.log(process.cwd());
     let file = core.getInput("file", { required: true });
     let githubUsername = core.getInput("github-username", { required: true });
-    console.log(file);
-    // let data = fs.readFileSync(file, "utf8");
     let obj = JSON.parse(file);
-    console.log("PARSED DATA:", obj);
-    core.setOutput("file", file);
-    core.setOutput("slack_id", obj[githubUsername]);
+    core.setOutput("slack_id", obj[0][githubUsername]);
   } catch (error) {
     core.setFailed(error.message);
     throw error;
