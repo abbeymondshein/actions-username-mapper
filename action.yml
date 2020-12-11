@@ -5,7 +5,7 @@ inputs:
     description: 'Github username' 
     required: true
   file:
-    description: 'location of json file to parse for username mapping'
+    description: 'JSON file to parse'
     required: true
 outputs:
   slack-id: # id of output
