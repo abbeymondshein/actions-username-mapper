@@ -1,6 +1,6 @@
 name: 'Map Github Username to Slack Id'
 description: 'Accepts a GH Username, an inline JSON mapping of GH usernames to Slack ID's, and returns the desired slack id'
-inputs: 
+inputs: # id of input
   github-username:  
     description: 'Github username' 
     required: true
